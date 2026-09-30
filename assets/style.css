@@ -16,13 +16,12 @@ body {
 }
 
 .container {
-  max-width: 680px;
   margin: 0 auto;
-  padding: 0 24px 96px;
 }
 
 .hero {
-  padding: 32px 0 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   text-align: center;
   position: relative;
   background: white;
@@ -32,7 +31,7 @@ body {
 .hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 760px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -40,7 +39,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/assets/streamlines.png") no-repeat 5% center / 850px;
+  background: url("/assets/streamlines.png") no-repeat 5% center;
   pointer-events: none;
 }
 
@@ -52,15 +51,6 @@ body {
   mix-blend-mode: screen;
   opacity: 0.08;
   pointer-events: none;
-}
-
-.eyebrow {
-  margin: 0 0 16px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--primary);
 }
 
 h1 {
@@ -85,7 +75,11 @@ h1 {
 }
 
 .section {
-  margin-top: 36px;
+  scroll-margin-top: 90px;
+  margin-top: 10px;
+  padding-top:15px;
+  padding-left:15px;
+  padding-right:15px;
 }
 
 h2 {
@@ -99,6 +93,7 @@ h3 {
 }
 
 p {
+  max-width: 600px;
   margin: 0 0 16px;
   color: #334155;
 }
@@ -193,9 +188,8 @@ a:hover {
 }
 
 .nav-inner {
-  max-width: 680px;
   margin: 0 auto;
-  padding: 18px 24px;
+  padding: 18px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -276,17 +270,14 @@ a:hover {
   font-weight: 500;
 }
 
-section {
-  scroll-margin-top: 90px;
-}
-
-
-
 .carousel {
   position: relative;
   width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
   overflow: hidden;
 }
+
 
 .carousel-track {
   display: flex;
@@ -368,3 +359,155 @@ section {
     margin: 0 20px 20px 0;
 }
 
+.carousel-control-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 3;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+
+  background: white;
+  color: var(--primary);
+
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.carousel:hover .carousel-control-center,
+.carousel-control-center:focus-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.carousel-control-center:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+}
+
+
+
+.hero-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0;
+  padding: 16px 24px;
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--primary-soft);
+}
+
+.hero-action {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-action.secondary {
+  color: var(--muted);
+}
+
+.hero-action:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+
+.whatwedo {
+  background: #EEEEEE
+}
+
+.whatwedo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.whatwedo details {
+  max-width: 360px;
+  width: 100%;
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: white;
+
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.whatwedo summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+
+  padding: 18px 20px;
+
+  font-weight: 500;
+  color: var(--text);
+
+  cursor: pointer;
+  list-style: none;
+}
+
+.whatwedo summary::-webkit-details-marker {
+  display: none;
+}
+
+.whatwedo summary::after {
+  content: "+";
+  flex: 0 0 auto;
+
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.whatwedo details[open] summary::after {
+  content: "−";
+}
+
+.whatwedo details[open] summary {
+  color: var(--primary);
+}
+
+.whatwedo details p {
+  margin: 0;
+  padding: 0 20px 20px;
+
+  color: var(--muted);
+}
