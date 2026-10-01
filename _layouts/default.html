@@ -1,50 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/style.css" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
 
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="f2e129c7-5605-4826-94e0-86a64d255222" data-domains="eidona.bio,www.eidona.bio"></script>
-  <script src="{{ '/assets/js/topnav.js' | relative_url }}"></script>
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="f2e129c7-5605-4826-94e0-86a64d255222"
+      data-domains="eidona.bio,www.eidona.bio"
+    ></script>
+    <script src="{{ '/assets/js/topnav.js' | relative_url }}"></script>
+  </head>
 
-</head>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo logo">
+        <img src="/assets/eidona_with_grid.png" />
+      </div>
 
-<header class="navbar">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
 
-  <div class="nav-inner">
-
-    <div class="nav-logo logo">
-      <span class="mark">E</span>idona <span class="bio">Bio</span>
+      <nav class="nav-links">
+        <a href="#approach">Approach</a>
+        <a href="#founders">Founders</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    
-    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-      ☰
-    </button>
-
-    <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#approach">Approach</a>
-      <a href="#founders">Founders</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-  </div>
-
-</header>
-
-<body>
-
-  <main class="container">
-    {{ content }}
-  </main>
-
-</body>
+  <body>
+    <main class="container">{{ content }}</main>
+  </body>
 </html>

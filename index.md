@@ -5,24 +5,6 @@ title: Home
 
 <script src="{{ '/assets/js/carousel.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/whatwedo.js' | relative_url }}"></script>
-<section  id="home" class="hero">
-
-  <div class="hero-inner">
-
-    <div class="logo">
-      <span class="mark">E</span>idona <span class="bio">Bio</span>
-    </div>
-
-    <p class="tagline">
-      A multimodal model of biological response
-    </p>
-    <p class="hero-text">
-      Fill in the experiments nobody ran.
-    </p>
-
-  </div>
-</section>
-
 <div class="hero-actions">
   <a class="hero-action primary" href="mailto:contact@eidona.bio">
     Talk to us about a program →
@@ -35,7 +17,7 @@ title: Home
 
 <section id="approach" class="section approach">
 
-  <h2>Our approach</h2>
+  <h2>A multimodal model of biological response</h2>
 
   <div class="carousel" data-carousel>
     <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
