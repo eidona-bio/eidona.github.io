@@ -67,9 +67,7 @@ h1 {
 .section {
   scroll-margin-top: 90px;
   margin-top: 10px;
-  padding-top:15px;
-  padding-left:15px;
-  padding-right:15px;
+  padding:20px;
 }
 
 h2 {
