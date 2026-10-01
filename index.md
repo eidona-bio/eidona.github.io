@@ -52,6 +52,9 @@ title: Home
       <div class="carousel-slide">
         <img src="{{ '/assets/images/carousel-slide-4.svg' | relative_url }}" alt="">
       </div>
+      <div class="carousel-slide">
+        <img src="{{ '/assets/images/carousel-slide-5.svg' | relative_url }}" alt="">
+      </div>
     </div>
     <div class="carousel-dots"></div>
     <button class="carousel-btn next" type="button">›</button>
