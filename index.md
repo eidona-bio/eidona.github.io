@@ -156,7 +156,6 @@ We can work from a single campaign, assay or bounded dataset rather than requiri
       <p>
         Chemoproteomics and mechanism biology
       </p>
-      <br>
       <p>
         <a href="https://tinyurl.com/erikmartin-google-scholar"
           target="_blank"
